@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{a3e11f87-0397-4619-853f-5d15b2d5eac8}</ProjectGuid>
-    <RootNamespace>MotorSim</RootNamespace>
+    <ProjectGuid>{87cac0cd-413c-4857-992d-f089bd759f54}</ProjectGuid>
+    <RootNamespace>MotorSimApp</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -116,13 +116,10 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(AF_PATH)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(AF_PATH)\lib;</AdditionalLibraryDirectories>
-      <AdditionalDependencies>afcuda.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -142,21 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CondElem.cpp" />
-    <ClCompile Include="Conductor.cpp" />
-    <ClCompile Include="MotorSim.cpp" />
-    <ClCompile Include="Point3.cpp" />
-    <ClCompile Include="Space3.cpp" />
-    <ClCompile Include="SystemState.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="CondElem.h" />
-    <ClInclude Include="Conductor.h" />
-    <ClInclude Include="MotorSim.h" />
-    <ClInclude Include="Space3.h" />
-    <ClInclude Include="SystemState.h" />
-    <ClInclude Include="Helper.h" />
-    <ClInclude Include="Point3.h" />
+    <ClCompile Include="MotorSimApp.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
