@@ -9,6 +9,7 @@ using std::endl;
 int main()
 {
 	CConductor objStatorWindingU;
+	CSpace3 objSpace(CPoint3(2.0, 2.0, 2.0), CPoint3(-2.0, -2.0, -2.0), 0.1);
 
 	for (float fWindingLoopZ = 0.0f; fWindingLoopZ < (10.0f - 0.4f); fWindingLoopZ += 0.4f) {
 		CCondElem objElemRight(CPoint3(1.0, 1.0, fWindingLoopZ), CPoint3(1.0, -1.0, fWindingLoopZ + 0.1), 0.1, 0.1, EObjectType::E_OBJECT_TYPE_FIXED);
@@ -23,7 +24,9 @@ int main()
 
 	objStatorWindingU.CreateArrayObjects();
 
-	cout << "Hello World!\n";
+	cout << "Conductor Object" << endl;
+	cout << "Array Size : " << objStatorWindingU.GetArray().bytes() << endl;
+	cout << "Array Dims : Rows : " << objStatorWindingU.GetArray().dims().dims[0] << " cols : " << objStatorWindingU.GetArray().dims().dims[1] << endl;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
